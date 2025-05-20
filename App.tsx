@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Pressable } from 'react-native';
 import './global.css';
 
 export default function App() {
+	let id = 0;
 	let users = [
 		{ name: 'Alejo Kim Uy', github_repo: 'devaku', group_no: 7 },
 		{
@@ -18,7 +19,7 @@ export default function App() {
 			<Text className="bg-blue">Group Members</Text>
 			<View className="">
 				{users.map((item) => (
-					<Text>Name: {item.name}</Text>
+					<Text key={id++}>Name: {item.name}</Text>
 				))}
 			</View>
 

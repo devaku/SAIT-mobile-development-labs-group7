@@ -1,9 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Pressable } from 'react-native';
+import { useRouter } from 'expo-router';
 
-import './global.css';
+import '../global.css';
 
 export default function App() {
+	const router = useRouter();
 	let id = 0;
 	let users = [
 		{ name: 'Alejo Kim Uy', github_repo: 'devaku', group_no: 7 },
@@ -16,19 +18,11 @@ export default function App() {
 	];
 	return (
 		<View style={styles.container}>
-			<Text className="bg-blue">Group Members</Text>
-			<View className="">
-				{users.map((item) => (
-					<Text key={id++}>Name: {item.name}</Text>
-				))}
-			</View>
-
-			<Pressable className="p-10">
-				<Text style={styles.text} onPress={() => alert('Lab 1 Done')}>
-					Click Me
+			<Pressable>
+				<Text className="bg-blue" onPress={() => router.push('/posts')}>
+					THIS IS THE INDEX PAGE
 				</Text>
 			</Pressable>
-			<StatusBar style="auto" />
 		</View>
 	);
 }

@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Pressable } from 'react-native';
+import { FlatList } from 'react-native-gesture-handler';
 import { useRouter } from 'expo-router';
 
 import '../global.css';
@@ -17,10 +18,23 @@ export default function App() {
 		{ name: 'Theodore Frocklage', github_repo: 'Bdopz', group_no: 7 },
 	];
 	return (
-		<View style={styles.container}>
+		<View className="" style={styles.container}>
 			<Pressable>
-				<Text className="bg-blue" onPress={() => router.push('/posts')}>
-					THIS IS THE INDEX PAGE
+				<Text className="bg-blue" onPress={() => router.push('/apple')}>
+					Apple
+				</Text>
+			</Pressable>
+			<Pressable>
+				<Text className="bg-blue" onPress={() => router.push('/mango')}>
+					Mango
+				</Text>
+			</Pressable>
+			<Pressable>
+				<Text
+					className="bg-blue"
+					onPress={() => router.push('/orange')}
+				>
+					Orangre
 				</Text>
 			</Pressable>
 		</View>

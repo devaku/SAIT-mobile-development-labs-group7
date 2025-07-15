@@ -4,9 +4,8 @@ import { AppState } from 'react-native';
 import { createClient, processLock } from '@supabase/supabase-js';
 
 // This needs to not be hardcoded
-const supabaseUrl = 'https://ebyhmvhbwlmnulnmmcfe.supabase.co';
-const supabaseAnonKey =
-	'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVieWhtdmhid2xtbnVsbm1tY2ZlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA5NTU5NDMsImV4cCI6MjA2NjUzMTk0M30.CwxxZqOIt1kDNcNPmPqUxirAk7nq5C1bzWii2DicmjE';
+const supabaseUrl = '<URL>';
+const supabaseAnonKey = '<KEY>';
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
 	auth: {
